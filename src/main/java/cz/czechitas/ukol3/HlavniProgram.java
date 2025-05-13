@@ -19,8 +19,12 @@ public class HlavniProgram {
 
         Disk mujDisk = new Disk();
         mujDisk.setKapacita(1_024_203_640_320L);
-        mujDisk.setVyuziteMisto(267_225_284_096L);
+        mujDisk.setVyuziteMisto(967_225_284_096L);
         System.out.println(mujDisk.toString()); //při spuštění stále hlási chybu - není RAM, jinak vypisuje
+
+        Disk druhyDisk = new Disk();
+        druhyDisk.setKapacita(1_024_203_640_320L);
+        druhyDisk.setVyuziteMisto(267_225_284_096L);
 
         Pamet pametMehoPc = new Pamet();
         pametMehoPc.setKapacita(20_900_000_000L);
@@ -29,19 +33,18 @@ public class HlavniProgram {
         mujPocitac.setRam(pametMehoPc);
         mujPocitac.setCpu(mujProcesor);
         mujPocitac.setPevnyDisk(mujDisk);
+        mujPocitac.setDruhyDisk(druhyDisk);
         mujPocitac.zapniSe();//počítač se standardně zapnul
         mujPocitac.zapniSe();//vyskočila chybová hláška - dvakrát zapnuto
 
         System.out.println(mujPocitac.toString());
 
-        mujPocitac.vytvorSouborOVelikosti(500L);
+        mujPocitac.vytvorSouborOVelikosti(200_000_000_000L);
         System.out.println(mujPocitac.toString());
 
         mujPocitac.vymazSouborOVelikosti(500L);
         System.out.println(mujPocitac.toString());
         mujPocitac.vypniSe();
-
-        mujPocitac.vytvorSouborOVelikosti(500L);
         mujPocitac.vypniSe();
 
     }

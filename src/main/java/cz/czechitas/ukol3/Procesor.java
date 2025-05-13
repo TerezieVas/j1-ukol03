@@ -19,4 +19,9 @@ public class Procesor {
     public void setRychlost(Long rychlost) {
         this.rychlost = rychlost;
     }
+
+    public String toString() {
+        return "Výrobce procesoru je " + vyrobce + " a jeho rychlost je " + rychlost + "Hz";
+    }
+
 }

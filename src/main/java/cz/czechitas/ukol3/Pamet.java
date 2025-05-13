@@ -10,4 +10,9 @@ public class Pamet {
     public void setKapacita(Long kapacita) {
         this.kapacita = kapacita;
     }
+
+    public String toString() {
+        return "Kapacita paměti je " + kapacita + " bajtů";
+    }
+
 }
